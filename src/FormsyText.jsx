@@ -68,9 +68,9 @@ const FormsyText = React.createClass({
 
   handleChange: function handleChange(event) {
     // Update the value (and so display any error) after a timeout.
-    if (this.props.updateImmediately) {
+    if (this.props.updateImmediately !== false) {
       if (!this.changeValue) {
-        this.changeValue = debounce(this.setValue, 400);
+        this.changeValue = debounce(this.setValue, 300);
       }
       this.changeValue(event.currentTarget.value);
     } else {
