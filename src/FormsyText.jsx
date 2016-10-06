@@ -123,7 +123,7 @@ const FormsyText = React.createClass({
     return (
       <TextField
         {...rest}
-        isRequired={required}
+        isRequired={rest.required}
         errorText={this.getErrorMessage()}
         onBlur={this.handleBlur}
         onChange={this.handleChange}
